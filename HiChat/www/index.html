@@ -1,0 +1,11 @@
+
+//Return static page by express module
+var express = require('express'),       //import express module
+
+app = express(),
+
+server = require('http').createServer(app);
+
+app.user('/',express.static(__direname + '/www'));   //Link to location of static HTML page
+
+server.listen(1234);
